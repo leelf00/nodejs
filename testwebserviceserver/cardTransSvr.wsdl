@@ -1,0 +1,1908 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions name="cardTransSvr"
+ targetNamespace="http://172.18.55.86:9000/cardTransSvr.wsdl"
+ xmlns:tns="http://172.18.55.86:9000/cardTransSvr.wsdl"
+ xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
+ xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+ xmlns:ns="http://172.18.55.86/"
+ xmlns:SOAP="http://schemas.xmlsoap.org/wsdl/soap/"
+ xmlns:MIME="http://schemas.xmlsoap.org/wsdl/mime/"
+ xmlns:DIME="http://schemas.xmlsoap.org/ws/2002/04/dime/wsdl/"
+ xmlns:WSDL="http://schemas.xmlsoap.org/wsdl/"
+ xmlns="http://schemas.xmlsoap.org/wsdl/">
+
+<types>
+
+ <schema targetNamespace="http://172.18.55.86/"
+  xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
+  xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  xmlns:ns="http://172.18.55.86/"
+  xmlns="http://www.w3.org/2001/XMLSchema"
+  elementFormDefault="unqualified"
+  attributeFormDefault="unqualified">
+  <import namespace="http://schemas.xmlsoap.org/soap/encoding/" schemaLocation="http://schemas.xmlsoap.org/soap/encoding/"/>
+  <!-- operation request element -->
+  <element name="mkcard">
+   <complexType>
+    <sequence>
+     <element name="requestJson" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- ns__mkcard::requestJson -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation response element -->
+  <element name="mkcardResponse">
+   <complexType>
+    <sequence>
+     <element name="pResponseJson" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- ns__mkcard::pResponseJson -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation request element -->
+  <element name="opdcard">
+   <complexType>
+    <sequence>
+     <element name="requestJson" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- ns__opdcard::requestJson -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation response element -->
+  <element name="opdcardResponse">
+   <complexType>
+    <sequence>
+     <element name="pResponseJson" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- ns__opdcard::pResponseJson -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation request element -->
+  <element name="chargecard">
+   <complexType>
+    <sequence>
+     <element name="requestJson" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- ns__chargecard::requestJson -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation response element -->
+  <element name="chargecardResponse">
+   <complexType>
+    <sequence>
+     <element name="pResponseJson" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- ns__chargecard::pResponseJson -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation request element -->
+  <element name="rchargecard">
+   <complexType>
+    <sequence>
+     <element name="requestJson" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- ns__rchargecard::requestJson -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation response element -->
+  <element name="rchargecardResponse">
+   <complexType>
+    <sequence>
+     <element name="pResponseJson" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- ns__rchargecard::pResponseJson -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation request element -->
+  <element name="vchargecard">
+   <complexType>
+    <sequence>
+     <element name="requestJson" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- ns__vchargecard::requestJson -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation response element -->
+  <element name="vchargecardResponse">
+   <complexType>
+    <sequence>
+     <element name="pResponseJson" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- ns__vchargecard::pResponseJson -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation request element -->
+  <element name="predcard">
+   <complexType>
+    <sequence>
+     <element name="requestJson" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- ns__predcard::requestJson -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation response element -->
+  <element name="predcardResponse">
+   <complexType>
+    <sequence>
+     <element name="pResponseJson" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- ns__predcard::pResponseJson -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation request element -->
+  <element name="purchasecard">
+   <complexType>
+    <sequence>
+     <element name="requestJson" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- ns__purchasecard::requestJson -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation response element -->
+  <element name="purchasecardResponse">
+   <complexType>
+    <sequence>
+     <element name="pResponseJson" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- ns__purchasecard::pResponseJson -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation request element -->
+  <element name="rpurchasecard">
+   <complexType>
+    <sequence>
+     <element name="requestJson" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- ns__rpurchasecard::requestJson -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation response element -->
+  <element name="rpurchasecardResponse">
+   <complexType>
+    <sequence>
+     <element name="pResponseJson" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- ns__rpurchasecard::pResponseJson -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation request element -->
+  <element name="vpurchasecard">
+   <complexType>
+    <sequence>
+     <element name="requestJson" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- ns__vpurchasecard::requestJson -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation response element -->
+  <element name="vpurchasecardResponse">
+   <complexType>
+    <sequence>
+     <element name="pResponseJson" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- ns__vpurchasecard::pResponseJson -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation request element -->
+  <element name="freezecard">
+   <complexType>
+    <sequence>
+     <element name="requestJson" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- ns__freezecard::requestJson -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation response element -->
+  <element name="freezecardResponse">
+   <complexType>
+    <sequence>
+     <element name="pResponseJson" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- ns__freezecard::pResponseJson -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation request element -->
+  <element name="unfreezecard">
+   <complexType>
+    <sequence>
+     <element name="requestJson" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- ns__unfreezecard::requestJson -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation response element -->
+  <element name="unfreezecardResponse">
+   <complexType>
+    <sequence>
+     <element name="pResponseJson" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- ns__unfreezecard::pResponseJson -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation request element -->
+  <element name="unfreeze2card">
+   <complexType>
+    <sequence>
+     <element name="requestJson" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- ns__unfreeze2card::requestJson -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation response element -->
+  <element name="unfreeze2cardResponse">
+   <complexType>
+    <sequence>
+     <element name="pResponseJson" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- ns__unfreeze2card::pResponseJson -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation request element -->
+  <element name="sign">
+   <complexType>
+    <sequence>
+     <element name="requestJson" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- ns__sign::requestJson -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation response element -->
+  <element name="signResponse">
+   <complexType>
+    <sequence>
+     <element name="pResponseJson" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- ns__sign::pResponseJson -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation request element -->
+  <element name="signout">
+   <complexType>
+    <sequence>
+     <element name="requestJson" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- ns__signout::requestJson -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation response element -->
+  <element name="signoutResponse">
+   <complexType>
+    <sequence>
+     <element name="pResponseJson" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- ns__signout::pResponseJson -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation request element -->
+  <element name="batch">
+   <complexType>
+    <sequence>
+     <element name="requestJson" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- ns__batch::requestJson -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation response element -->
+  <element name="batchResponse">
+   <complexType>
+    <sequence>
+     <element name="pResponseJson" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- ns__batch::pResponseJson -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation request element -->
+  <element name="tmkdown">
+   <complexType>
+    <sequence>
+     <element name="requestJson" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- ns__tmkdown::requestJson -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation response element -->
+  <element name="tmkdownResponse">
+   <complexType>
+    <sequence>
+     <element name="pResponseJson" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- ns__tmkdown::pResponseJson -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation request element -->
+  <element name="refund">
+   <complexType>
+    <sequence>
+     <element name="requestJson" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- ns__refund::requestJson -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation response element -->
+  <element name="refundResponse">
+   <complexType>
+    <sequence>
+     <element name="pResponseJson" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- ns__refund::pResponseJson -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation request element -->
+  <element name="whitedown">
+   <complexType>
+    <sequence>
+     <element name="requestJson" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- ns__whitedown::requestJson -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation response element -->
+  <element name="whitedownResponse">
+   <complexType>
+    <sequence>
+     <element name="pResponseJson" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- ns__whitedown::pResponseJson -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation request element -->
+  <element name="lostcard">
+   <complexType>
+    <sequence>
+     <element name="requestJson" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- ns__lostcard::requestJson -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation response element -->
+  <element name="lostcardResponse">
+   <complexType>
+    <sequence>
+     <element name="pResponseJson" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- ns__lostcard::pResponseJson -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation request element -->
+  <element name="unlostcard">
+   <complexType>
+    <sequence>
+     <element name="requestJson" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- ns__unlostcard::requestJson -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation response element -->
+  <element name="unlostcardResponse">
+   <complexType>
+    <sequence>
+     <element name="pResponseJson" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- ns__unlostcard::pResponseJson -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation request element -->
+  <element name="changecard">
+   <complexType>
+    <sequence>
+     <element name="requestJson" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- ns__changecard::requestJson -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation response element -->
+  <element name="changecardResponse">
+   <complexType>
+    <sequence>
+     <element name="pResponseJson" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- ns__changecard::pResponseJson -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation request element -->
+  <element name="validcard">
+   <complexType>
+    <sequence>
+     <element name="requestJson" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- ns__validcard::requestJson -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation response element -->
+  <element name="validcardResponse">
+   <complexType>
+    <sequence>
+     <element name="pResponseJson" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- ns__validcard::pResponseJson -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation request element -->
+  <element name="querycard">
+   <complexType>
+    <sequence>
+     <element name="requestJson" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- ns__querycard::requestJson -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation response element -->
+  <element name="querycardResponse">
+   <complexType>
+    <sequence>
+     <element name="pResponseJson" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- ns__querycard::pResponseJson -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation request element -->
+  <element name="querytrans">
+   <complexType>
+    <sequence>
+     <element name="requestJson" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- ns__querytrans::requestJson -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation response element -->
+  <element name="querytransResponse">
+   <complexType>
+    <sequence>
+     <element name="pResponseJson" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- ns__querytrans::pResponseJson -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation request element -->
+  <element name="vfreezetrans">
+   <complexType>
+    <sequence>
+     <element name="requestJson" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- ns__vfreezetrans::requestJson -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation response element -->
+  <element name="vfreezetransResponse">
+   <complexType>
+    <sequence>
+     <element name="pResponseJson" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- ns__vfreezetrans::pResponseJson -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation request element -->
+  <element name="f2zcardtrans">
+   <complexType>
+    <sequence>
+     <element name="requestJson" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- ns__f2zcardtrans::requestJson -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation response element -->
+  <element name="f2zcardtransResponse">
+   <complexType>
+    <sequence>
+     <element name="pResponseJson" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- ns__f2zcardtrans::pResponseJson -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation request element -->
+  <element name="nr2rtrans">
+   <complexType>
+    <sequence>
+     <element name="requestJson" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- ns__nr2rtrans::requestJson -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation response element -->
+  <element name="nr2rtransResponse">
+   <complexType>
+    <sequence>
+     <element name="pResponseJson" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- ns__nr2rtrans::pResponseJson -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation request element -->
+  <element name="s2mtrans">
+   <complexType>
+    <sequence>
+     <element name="requestJson" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- ns__s2mtrans::requestJson -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation response element -->
+  <element name="s2mtransResponse">
+   <complexType>
+    <sequence>
+     <element name="pResponseJson" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- ns__s2mtrans::pResponseJson -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation request element -->
+  <element name="validtrans">
+   <complexType>
+    <sequence>
+     <element name="requestJson" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- ns__validtrans::requestJson -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation response element -->
+  <element name="validtransResponse">
+   <complexType>
+    <sequence>
+     <element name="pResponseJson" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- ns__validtrans::pResponseJson -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation request element -->
+  <element name="copdreqtrans">
+   <complexType>
+    <sequence>
+     <element name="requestJson" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- ns__copdreqtrans::requestJson -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation response element -->
+  <element name="copdreqtransResponse">
+   <complexType>
+    <sequence>
+     <element name="pResponseJson" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- ns__copdreqtrans::pResponseJson -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation request element -->
+  <element name="copdtrans">
+   <complexType>
+    <sequence>
+     <element name="requestJson" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- ns__copdtrans::requestJson -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation response element -->
+  <element name="copdtransResponse">
+   <complexType>
+    <sequence>
+     <element name="pResponseJson" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- ns__copdtrans::pResponseJson -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation request element -->
+  <element name="ulockcard">
+   <complexType>
+    <sequence>
+     <element name="requestJson" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- ns__ulockcard::requestJson -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation response element -->
+  <element name="ulockcardResponse">
+   <complexType>
+    <sequence>
+     <element name="pResponseJson" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- ns__ulockcard::pResponseJson -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation request element -->
+  <element name="chagepincard">
+   <complexType>
+    <sequence>
+     <element name="requestJson" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- ns__chagepincard::requestJson -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation response element -->
+  <element name="chagepincardResponse">
+   <complexType>
+    <sequence>
+     <element name="pResponseJson" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- ns__chagepincard::pResponseJson -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation request element -->
+  <element name="blackdown">
+   <complexType>
+    <sequence>
+     <element name="requestJson" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- ns__blackdown::requestJson -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation response element -->
+  <element name="blackdownResponse">
+   <complexType>
+    <sequence>
+     <element name="pResponseJson" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- ns__blackdown::pResponseJson -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation request element -->
+  <element name="accrefund">
+   <complexType>
+    <sequence>
+     <element name="requestJson" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- ns__accrefund::requestJson -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation response element -->
+  <element name="accrefundResponse">
+   <complexType>
+    <sequence>
+     <element name="pResponseJson" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- ns__accrefund::pResponseJson -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation request element -->
+  <element name="hsmsvr">
+   <complexType>
+    <sequence>
+     <element name="requestJson" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- ns__hsmsvr::requestJson -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation response element -->
+  <element name="hsmsvrResponse">
+   <complexType>
+    <sequence>
+     <element name="pResponseJson" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- ns__hsmsvr::pResponseJson -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation request element -->
+  <element name="dailysettlesvr">
+   <complexType>
+    <sequence>
+     <element name="requestJson" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- ns__dailysettlesvr::requestJson -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation response element -->
+  <element name="dailysettlesvrResponse">
+   <complexType>
+    <sequence>
+     <element name="pResponseJson" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- ns__dailysettlesvr::pResponseJson -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation request element -->
+  <element name="genvcardno">
+   <complexType>
+    <sequence>
+     <element name="requestJson" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- ns__genvcardno::requestJson -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation response element -->
+  <element name="genvcardnoResponse">
+   <complexType>
+    <sequence>
+     <element name="pResponseJson" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- ns__genvcardno::pResponseJson -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation request element -->
+  <element name="vcardpaycode">
+   <complexType>
+    <sequence>
+     <element name="requestJson" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- ns__vcardpaycode::requestJson -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation response element -->
+  <element name="vcardpaycodeResponse">
+   <complexType>
+    <sequence>
+     <element name="pResponseJson" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- ns__vcardpaycode::pResponseJson -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation request element -->
+  <element name="scannotice">
+   <complexType>
+    <sequence>
+     <element name="requestJson" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- ns__scannotice::requestJson -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation response element -->
+  <element name="scannoticeResponse">
+   <complexType>
+    <sequence>
+     <element name="pResponseJson" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- ns__scannotice::pResponseJson -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation request element -->
+  <element name="scanpay">
+   <complexType>
+    <sequence>
+     <element name="requestJson" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- ns__scanpay::requestJson -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation response element -->
+  <element name="scanpayResponse">
+   <complexType>
+    <sequence>
+     <element name="pResponseJson" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- ns__scanpay::pResponseJson -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation request element -->
+  <element name="grey">
+   <complexType>
+    <sequence>
+     <element name="requestJson" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- ns__grey::requestJson -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation response element -->
+  <element name="greyResponse">
+   <complexType>
+    <sequence>
+     <element name="pResponseJson" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- ns__grey::pResponseJson -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation request element -->
+  <element name="ungrey">
+   <complexType>
+    <sequence>
+     <element name="requestJson" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- ns__ungrey::requestJson -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation response element -->
+  <element name="ungreyResponse">
+   <complexType>
+    <sequence>
+     <element name="pResponseJson" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- ns__ungrey::pResponseJson -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation request element -->
+  <element name="load">
+   <complexType>
+    <sequence>
+     <element name="requestJson" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- ns__load::requestJson -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation response element -->
+  <element name="loadResponse">
+   <complexType>
+    <sequence>
+     <element name="pResponseJson" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- ns__load::pResponseJson -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation request element -->
+  <element name="loadconfirm">
+   <complexType>
+    <sequence>
+     <element name="requestJson" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- ns__loadconfirm::requestJson -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation response element -->
+  <element name="loadconfirmResponse">
+   <complexType>
+    <sequence>
+     <element name="pResponseJson" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- ns__loadconfirm::pResponseJson -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation request element -->
+  <element name="rload">
+   <complexType>
+    <sequence>
+     <element name="requestJson" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- ns__rload::requestJson -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation response element -->
+  <element name="rloadResponse">
+   <complexType>
+    <sequence>
+     <element name="pResponseJson" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- ns__rload::pResponseJson -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation request element -->
+  <element name="unloadreq">
+   <complexType>
+    <sequence>
+     <element name="requestJson" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- ns__unloadreq::requestJson -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation response element -->
+  <element name="unloadreqResponse">
+   <complexType>
+    <sequence>
+     <element name="pResponseJson" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- ns__unloadreq::pResponseJson -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation request element -->
+  <element name="unload">
+   <complexType>
+    <sequence>
+     <element name="requestJson" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- ns__unload::requestJson -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation response element -->
+  <element name="unloadResponse">
+   <complexType>
+    <sequence>
+     <element name="pResponseJson" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- ns__unload::pResponseJson -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation request element -->
+  <element name="resetpin">
+   <complexType>
+    <sequence>
+     <element name="requestJson" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- ns__resetpin::requestJson -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation response element -->
+  <element name="resetpinResponse">
+   <complexType>
+    <sequence>
+     <element name="pResponseJson" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- ns__resetpin::pResponseJson -->
+    </sequence>
+   </complexType>
+  </element>
+ </schema>
+
+</types>
+
+<message name="mkcardRequest">
+ <part name="parameters" element="ns:mkcard"/><!-- ns__mkcard::ns__mkcard -->
+</message>
+
+<message name="mkcardResponse">
+ <part name="parameters" element="ns:mkcardResponse"/>
+</message>
+
+<message name="opdcardRequest">
+ <part name="parameters" element="ns:opdcard"/><!-- ns__opdcard::ns__opdcard -->
+</message>
+
+<message name="opdcardResponse">
+ <part name="parameters" element="ns:opdcardResponse"/>
+</message>
+
+<message name="chargecardRequest">
+ <part name="parameters" element="ns:chargecard"/><!-- ns__chargecard::ns__chargecard -->
+</message>
+
+<message name="chargecardResponse">
+ <part name="parameters" element="ns:chargecardResponse"/>
+</message>
+
+<message name="rchargecardRequest">
+ <part name="parameters" element="ns:rchargecard"/><!-- ns__rchargecard::ns__rchargecard -->
+</message>
+
+<message name="rchargecardResponse">
+ <part name="parameters" element="ns:rchargecardResponse"/>
+</message>
+
+<message name="vchargecardRequest">
+ <part name="parameters" element="ns:vchargecard"/><!-- ns__vchargecard::ns__vchargecard -->
+</message>
+
+<message name="vchargecardResponse">
+ <part name="parameters" element="ns:vchargecardResponse"/>
+</message>
+
+<message name="predcardRequest">
+ <part name="parameters" element="ns:predcard"/><!-- ns__predcard::ns__predcard -->
+</message>
+
+<message name="predcardResponse">
+ <part name="parameters" element="ns:predcardResponse"/>
+</message>
+
+<message name="purchasecardRequest">
+ <part name="parameters" element="ns:purchasecard"/><!-- ns__purchasecard::ns__purchasecard -->
+</message>
+
+<message name="purchasecardResponse">
+ <part name="parameters" element="ns:purchasecardResponse"/>
+</message>
+
+<message name="rpurchasecardRequest">
+ <part name="parameters" element="ns:rpurchasecard"/><!-- ns__rpurchasecard::ns__rpurchasecard -->
+</message>
+
+<message name="rpurchasecardResponse">
+ <part name="parameters" element="ns:rpurchasecardResponse"/>
+</message>
+
+<message name="vpurchasecardRequest">
+ <part name="parameters" element="ns:vpurchasecard"/><!-- ns__vpurchasecard::ns__vpurchasecard -->
+</message>
+
+<message name="vpurchasecardResponse">
+ <part name="parameters" element="ns:vpurchasecardResponse"/>
+</message>
+
+<message name="freezecardRequest">
+ <part name="parameters" element="ns:freezecard"/><!-- ns__freezecard::ns__freezecard -->
+</message>
+
+<message name="freezecardResponse">
+ <part name="parameters" element="ns:freezecardResponse"/>
+</message>
+
+<message name="unfreezecardRequest">
+ <part name="parameters" element="ns:unfreezecard"/><!-- ns__unfreezecard::ns__unfreezecard -->
+</message>
+
+<message name="unfreezecardResponse">
+ <part name="parameters" element="ns:unfreezecardResponse"/>
+</message>
+
+<message name="unfreeze2cardRequest">
+ <part name="parameters" element="ns:unfreeze2card"/><!-- ns__unfreeze2card::ns__unfreeze2card -->
+</message>
+
+<message name="unfreeze2cardResponse">
+ <part name="parameters" element="ns:unfreeze2cardResponse"/>
+</message>
+
+<message name="signRequest">
+ <part name="parameters" element="ns:sign"/><!-- ns__sign::ns__sign -->
+</message>
+
+<message name="signResponse">
+ <part name="parameters" element="ns:signResponse"/>
+</message>
+
+<message name="signoutRequest">
+ <part name="parameters" element="ns:signout"/><!-- ns__signout::ns__signout -->
+</message>
+
+<message name="signoutResponse">
+ <part name="parameters" element="ns:signoutResponse"/>
+</message>
+
+<message name="batchRequest">
+ <part name="parameters" element="ns:batch"/><!-- ns__batch::ns__batch -->
+</message>
+
+<message name="batchResponse">
+ <part name="parameters" element="ns:batchResponse"/>
+</message>
+
+<message name="tmkdownRequest">
+ <part name="parameters" element="ns:tmkdown"/><!-- ns__tmkdown::ns__tmkdown -->
+</message>
+
+<message name="tmkdownResponse">
+ <part name="parameters" element="ns:tmkdownResponse"/>
+</message>
+
+<message name="refundRequest">
+ <part name="parameters" element="ns:refund"/><!-- ns__refund::ns__refund -->
+</message>
+
+<message name="refundResponse">
+ <part name="parameters" element="ns:refundResponse"/>
+</message>
+
+<message name="whitedownRequest">
+ <part name="parameters" element="ns:whitedown"/><!-- ns__whitedown::ns__whitedown -->
+</message>
+
+<message name="whitedownResponse">
+ <part name="parameters" element="ns:whitedownResponse"/>
+</message>
+
+<message name="lostcardRequest">
+ <part name="parameters" element="ns:lostcard"/><!-- ns__lostcard::ns__lostcard -->
+</message>
+
+<message name="lostcardResponse">
+ <part name="parameters" element="ns:lostcardResponse"/>
+</message>
+
+<message name="unlostcardRequest">
+ <part name="parameters" element="ns:unlostcard"/><!-- ns__unlostcard::ns__unlostcard -->
+</message>
+
+<message name="unlostcardResponse">
+ <part name="parameters" element="ns:unlostcardResponse"/>
+</message>
+
+<message name="changecardRequest">
+ <part name="parameters" element="ns:changecard"/><!-- ns__changecard::ns__changecard -->
+</message>
+
+<message name="changecardResponse">
+ <part name="parameters" element="ns:changecardResponse"/>
+</message>
+
+<message name="validcardRequest">
+ <part name="parameters" element="ns:validcard"/><!-- ns__validcard::ns__validcard -->
+</message>
+
+<message name="validcardResponse">
+ <part name="parameters" element="ns:validcardResponse"/>
+</message>
+
+<message name="querycardRequest">
+ <part name="parameters" element="ns:querycard"/><!-- ns__querycard::ns__querycard -->
+</message>
+
+<message name="querycardResponse">
+ <part name="parameters" element="ns:querycardResponse"/>
+</message>
+
+<message name="querytransRequest">
+ <part name="parameters" element="ns:querytrans"/><!-- ns__querytrans::ns__querytrans -->
+</message>
+
+<message name="querytransResponse">
+ <part name="parameters" element="ns:querytransResponse"/>
+</message>
+
+<message name="vfreezetransRequest">
+ <part name="parameters" element="ns:vfreezetrans"/><!-- ns__vfreezetrans::ns__vfreezetrans -->
+</message>
+
+<message name="vfreezetransResponse">
+ <part name="parameters" element="ns:vfreezetransResponse"/>
+</message>
+
+<message name="f2zcardtransRequest">
+ <part name="parameters" element="ns:f2zcardtrans"/><!-- ns__f2zcardtrans::ns__f2zcardtrans -->
+</message>
+
+<message name="f2zcardtransResponse">
+ <part name="parameters" element="ns:f2zcardtransResponse"/>
+</message>
+
+<message name="nr2rtransRequest">
+ <part name="parameters" element="ns:nr2rtrans"/><!-- ns__nr2rtrans::ns__nr2rtrans -->
+</message>
+
+<message name="nr2rtransResponse">
+ <part name="parameters" element="ns:nr2rtransResponse"/>
+</message>
+
+<message name="s2mtransRequest">
+ <part name="parameters" element="ns:s2mtrans"/><!-- ns__s2mtrans::ns__s2mtrans -->
+</message>
+
+<message name="s2mtransResponse">
+ <part name="parameters" element="ns:s2mtransResponse"/>
+</message>
+
+<message name="validtransRequest">
+ <part name="parameters" element="ns:validtrans"/><!-- ns__validtrans::ns__validtrans -->
+</message>
+
+<message name="validtransResponse">
+ <part name="parameters" element="ns:validtransResponse"/>
+</message>
+
+<message name="copdreqtransRequest">
+ <part name="parameters" element="ns:copdreqtrans"/><!-- ns__copdreqtrans::ns__copdreqtrans -->
+</message>
+
+<message name="copdreqtransResponse">
+ <part name="parameters" element="ns:copdreqtransResponse"/>
+</message>
+
+<message name="copdtransRequest">
+ <part name="parameters" element="ns:copdtrans"/><!-- ns__copdtrans::ns__copdtrans -->
+</message>
+
+<message name="copdtransResponse">
+ <part name="parameters" element="ns:copdtransResponse"/>
+</message>
+
+<message name="ulockcardRequest">
+ <part name="parameters" element="ns:ulockcard"/><!-- ns__ulockcard::ns__ulockcard -->
+</message>
+
+<message name="ulockcardResponse">
+ <part name="parameters" element="ns:ulockcardResponse"/>
+</message>
+
+<message name="chagepincardRequest">
+ <part name="parameters" element="ns:chagepincard"/><!-- ns__chagepincard::ns__chagepincard -->
+</message>
+
+<message name="chagepincardResponse">
+ <part name="parameters" element="ns:chagepincardResponse"/>
+</message>
+
+<message name="blackdownRequest">
+ <part name="parameters" element="ns:blackdown"/><!-- ns__blackdown::ns__blackdown -->
+</message>
+
+<message name="blackdownResponse">
+ <part name="parameters" element="ns:blackdownResponse"/>
+</message>
+
+<message name="accrefundRequest">
+ <part name="parameters" element="ns:accrefund"/><!-- ns__accrefund::ns__accrefund -->
+</message>
+
+<message name="accrefundResponse">
+ <part name="parameters" element="ns:accrefundResponse"/>
+</message>
+
+<message name="hsmsvrRequest">
+ <part name="parameters" element="ns:hsmsvr"/><!-- ns__hsmsvr::ns__hsmsvr -->
+</message>
+
+<message name="hsmsvrResponse">
+ <part name="parameters" element="ns:hsmsvrResponse"/>
+</message>
+
+<message name="dailysettlesvrRequest">
+ <part name="parameters" element="ns:dailysettlesvr"/><!-- ns__dailysettlesvr::ns__dailysettlesvr -->
+</message>
+
+<message name="dailysettlesvrResponse">
+ <part name="parameters" element="ns:dailysettlesvrResponse"/>
+</message>
+
+<message name="genvcardnoRequest">
+ <part name="parameters" element="ns:genvcardno"/><!-- ns__genvcardno::ns__genvcardno -->
+</message>
+
+<message name="genvcardnoResponse">
+ <part name="parameters" element="ns:genvcardnoResponse"/>
+</message>
+
+<message name="vcardpaycodeRequest">
+ <part name="parameters" element="ns:vcardpaycode"/><!-- ns__vcardpaycode::ns__vcardpaycode -->
+</message>
+
+<message name="vcardpaycodeResponse">
+ <part name="parameters" element="ns:vcardpaycodeResponse"/>
+</message>
+
+<message name="scannoticeRequest">
+ <part name="parameters" element="ns:scannotice"/><!-- ns__scannotice::ns__scannotice -->
+</message>
+
+<message name="scannoticeResponse">
+ <part name="parameters" element="ns:scannoticeResponse"/>
+</message>
+
+<message name="scanpayRequest">
+ <part name="parameters" element="ns:scanpay"/><!-- ns__scanpay::ns__scanpay -->
+</message>
+
+<message name="scanpayResponse">
+ <part name="parameters" element="ns:scanpayResponse"/>
+</message>
+
+<message name="greyRequest">
+ <part name="parameters" element="ns:grey"/><!-- ns__grey::ns__grey -->
+</message>
+
+<message name="greyResponse">
+ <part name="parameters" element="ns:greyResponse"/>
+</message>
+
+<message name="ungreyRequest">
+ <part name="parameters" element="ns:ungrey"/><!-- ns__ungrey::ns__ungrey -->
+</message>
+
+<message name="ungreyResponse">
+ <part name="parameters" element="ns:ungreyResponse"/>
+</message>
+
+<message name="loadRequest">
+ <part name="parameters" element="ns:load"/><!-- ns__load::ns__load -->
+</message>
+
+<message name="loadResponse">
+ <part name="parameters" element="ns:loadResponse"/>
+</message>
+
+<message name="loadconfirmRequest">
+ <part name="parameters" element="ns:loadconfirm"/><!-- ns__loadconfirm::ns__loadconfirm -->
+</message>
+
+<message name="loadconfirmResponse">
+ <part name="parameters" element="ns:loadconfirmResponse"/>
+</message>
+
+<message name="rloadRequest">
+ <part name="parameters" element="ns:rload"/><!-- ns__rload::ns__rload -->
+</message>
+
+<message name="rloadResponse">
+ <part name="parameters" element="ns:rloadResponse"/>
+</message>
+
+<message name="unloadreqRequest">
+ <part name="parameters" element="ns:unloadreq"/><!-- ns__unloadreq::ns__unloadreq -->
+</message>
+
+<message name="unloadreqResponse">
+ <part name="parameters" element="ns:unloadreqResponse"/>
+</message>
+
+<message name="unloadRequest">
+ <part name="parameters" element="ns:unload"/><!-- ns__unload::ns__unload -->
+</message>
+
+<message name="unloadResponse">
+ <part name="parameters" element="ns:unloadResponse"/>
+</message>
+
+<message name="resetpinRequest">
+ <part name="parameters" element="ns:resetpin"/><!-- ns__resetpin::ns__resetpin -->
+</message>
+
+<message name="resetpinResponse">
+ <part name="parameters" element="ns:resetpinResponse"/>
+</message>
+
+<portType name="cardTransSvrPortType">
+ <operation name="mkcard">
+  <documentation>Service definition of function ns__mkcard</documentation>
+  <input message="tns:mkcardRequest"/>
+  <output message="tns:mkcardResponse"/>
+ </operation>
+ <operation name="opdcard">
+  <documentation>Service definition of function ns__opdcard</documentation>
+  <input message="tns:opdcardRequest"/>
+  <output message="tns:opdcardResponse"/>
+ </operation>
+ <operation name="chargecard">
+  <documentation>Service definition of function ns__chargecard</documentation>
+  <input message="tns:chargecardRequest"/>
+  <output message="tns:chargecardResponse"/>
+ </operation>
+ <operation name="rchargecard">
+  <documentation>Service definition of function ns__rchargecard</documentation>
+  <input message="tns:rchargecardRequest"/>
+  <output message="tns:rchargecardResponse"/>
+ </operation>
+ <operation name="vchargecard">
+  <documentation>Service definition of function ns__vchargecard</documentation>
+  <input message="tns:vchargecardRequest"/>
+  <output message="tns:vchargecardResponse"/>
+ </operation>
+ <operation name="predcard">
+  <documentation>Service definition of function ns__predcard</documentation>
+  <input message="tns:predcardRequest"/>
+  <output message="tns:predcardResponse"/>
+ </operation>
+ <operation name="purchasecard">
+  <documentation>Service definition of function ns__purchasecard</documentation>
+  <input message="tns:purchasecardRequest"/>
+  <output message="tns:purchasecardResponse"/>
+ </operation>
+ <operation name="rpurchasecard">
+  <documentation>Service definition of function ns__rpurchasecard</documentation>
+  <input message="tns:rpurchasecardRequest"/>
+  <output message="tns:rpurchasecardResponse"/>
+ </operation>
+ <operation name="vpurchasecard">
+  <documentation>Service definition of function ns__vpurchasecard</documentation>
+  <input message="tns:vpurchasecardRequest"/>
+  <output message="tns:vpurchasecardResponse"/>
+ </operation>
+ <operation name="freezecard">
+  <documentation>Service definition of function ns__freezecard</documentation>
+  <input message="tns:freezecardRequest"/>
+  <output message="tns:freezecardResponse"/>
+ </operation>
+ <operation name="unfreezecard">
+  <documentation>Service definition of function ns__unfreezecard</documentation>
+  <input message="tns:unfreezecardRequest"/>
+  <output message="tns:unfreezecardResponse"/>
+ </operation>
+ <operation name="unfreeze2card">
+  <documentation>Service definition of function ns__unfreeze2card</documentation>
+  <input message="tns:unfreeze2cardRequest"/>
+  <output message="tns:unfreeze2cardResponse"/>
+ </operation>
+ <operation name="sign">
+  <documentation>Service definition of function ns__sign</documentation>
+  <input message="tns:signRequest"/>
+  <output message="tns:signResponse"/>
+ </operation>
+ <operation name="signout">
+  <documentation>Service definition of function ns__signout</documentation>
+  <input message="tns:signoutRequest"/>
+  <output message="tns:signoutResponse"/>
+ </operation>
+ <operation name="batch">
+  <documentation>Service definition of function ns__batch</documentation>
+  <input message="tns:batchRequest"/>
+  <output message="tns:batchResponse"/>
+ </operation>
+ <operation name="tmkdown">
+  <documentation>Service definition of function ns__tmkdown</documentation>
+  <input message="tns:tmkdownRequest"/>
+  <output message="tns:tmkdownResponse"/>
+ </operation>
+ <operation name="refund">
+  <documentation>Service definition of function ns__refund</documentation>
+  <input message="tns:refundRequest"/>
+  <output message="tns:refundResponse"/>
+ </operation>
+ <operation name="whitedown">
+  <documentation>Service definition of function ns__whitedown</documentation>
+  <input message="tns:whitedownRequest"/>
+  <output message="tns:whitedownResponse"/>
+ </operation>
+ <operation name="lostcard">
+  <documentation>Service definition of function ns__lostcard</documentation>
+  <input message="tns:lostcardRequest"/>
+  <output message="tns:lostcardResponse"/>
+ </operation>
+ <operation name="unlostcard">
+  <documentation>Service definition of function ns__unlostcard</documentation>
+  <input message="tns:unlostcardRequest"/>
+  <output message="tns:unlostcardResponse"/>
+ </operation>
+ <operation name="changecard">
+  <documentation>Service definition of function ns__changecard</documentation>
+  <input message="tns:changecardRequest"/>
+  <output message="tns:changecardResponse"/>
+ </operation>
+ <operation name="validcard">
+  <documentation>Service definition of function ns__validcard</documentation>
+  <input message="tns:validcardRequest"/>
+  <output message="tns:validcardResponse"/>
+ </operation>
+ <operation name="querycard">
+  <documentation>Service definition of function ns__querycard</documentation>
+  <input message="tns:querycardRequest"/>
+  <output message="tns:querycardResponse"/>
+ </operation>
+ <operation name="querytrans">
+  <documentation>Service definition of function ns__querytrans</documentation>
+  <input message="tns:querytransRequest"/>
+  <output message="tns:querytransResponse"/>
+ </operation>
+ <operation name="vfreezetrans">
+  <documentation>Service definition of function ns__vfreezetrans</documentation>
+  <input message="tns:vfreezetransRequest"/>
+  <output message="tns:vfreezetransResponse"/>
+ </operation>
+ <operation name="f2zcardtrans">
+  <documentation>Service definition of function ns__f2zcardtrans</documentation>
+  <input message="tns:f2zcardtransRequest"/>
+  <output message="tns:f2zcardtransResponse"/>
+ </operation>
+ <operation name="nr2rtrans">
+  <documentation>Service definition of function ns__nr2rtrans</documentation>
+  <input message="tns:nr2rtransRequest"/>
+  <output message="tns:nr2rtransResponse"/>
+ </operation>
+ <operation name="s2mtrans">
+  <documentation>Service definition of function ns__s2mtrans</documentation>
+  <input message="tns:s2mtransRequest"/>
+  <output message="tns:s2mtransResponse"/>
+ </operation>
+ <operation name="validtrans">
+  <documentation>Service definition of function ns__validtrans</documentation>
+  <input message="tns:validtransRequest"/>
+  <output message="tns:validtransResponse"/>
+ </operation>
+ <operation name="copdreqtrans">
+  <documentation>Service definition of function ns__copdreqtrans</documentation>
+  <input message="tns:copdreqtransRequest"/>
+  <output message="tns:copdreqtransResponse"/>
+ </operation>
+ <operation name="copdtrans">
+  <documentation>Service definition of function ns__copdtrans</documentation>
+  <input message="tns:copdtransRequest"/>
+  <output message="tns:copdtransResponse"/>
+ </operation>
+ <operation name="ulockcard">
+  <documentation>Service definition of function ns__ulockcard</documentation>
+  <input message="tns:ulockcardRequest"/>
+  <output message="tns:ulockcardResponse"/>
+ </operation>
+ <operation name="chagepincard">
+  <documentation>Service definition of function ns__chagepincard</documentation>
+  <input message="tns:chagepincardRequest"/>
+  <output message="tns:chagepincardResponse"/>
+ </operation>
+ <operation name="blackdown">
+  <documentation>Service definition of function ns__blackdown</documentation>
+  <input message="tns:blackdownRequest"/>
+  <output message="tns:blackdownResponse"/>
+ </operation>
+ <operation name="accrefund">
+  <documentation>Service definition of function ns__accrefund</documentation>
+  <input message="tns:accrefundRequest"/>
+  <output message="tns:accrefundResponse"/>
+ </operation>
+ <operation name="hsmsvr">
+  <documentation>Service definition of function ns__hsmsvr</documentation>
+  <input message="tns:hsmsvrRequest"/>
+  <output message="tns:hsmsvrResponse"/>
+ </operation>
+ <operation name="dailysettlesvr">
+  <documentation>Service definition of function ns__dailysettlesvr</documentation>
+  <input message="tns:dailysettlesvrRequest"/>
+  <output message="tns:dailysettlesvrResponse"/>
+ </operation>
+ <operation name="genvcardno">
+  <documentation>Service definition of function ns__genvcardno</documentation>
+  <input message="tns:genvcardnoRequest"/>
+  <output message="tns:genvcardnoResponse"/>
+ </operation>
+ <operation name="vcardpaycode">
+  <documentation>Service definition of function ns__vcardpaycode</documentation>
+  <input message="tns:vcardpaycodeRequest"/>
+  <output message="tns:vcardpaycodeResponse"/>
+ </operation>
+ <operation name="scannotice">
+  <documentation>Service definition of function ns__scannotice</documentation>
+  <input message="tns:scannoticeRequest"/>
+  <output message="tns:scannoticeResponse"/>
+ </operation>
+ <operation name="scanpay">
+  <documentation>Service definition of function ns__scanpay</documentation>
+  <input message="tns:scanpayRequest"/>
+  <output message="tns:scanpayResponse"/>
+ </operation>
+ <operation name="grey">
+  <documentation>Service definition of function ns__grey</documentation>
+  <input message="tns:greyRequest"/>
+  <output message="tns:greyResponse"/>
+ </operation>
+ <operation name="ungrey">
+  <documentation>Service definition of function ns__ungrey</documentation>
+  <input message="tns:ungreyRequest"/>
+  <output message="tns:ungreyResponse"/>
+ </operation>
+ <operation name="load">
+  <documentation>Service definition of function ns__load</documentation>
+  <input message="tns:loadRequest"/>
+  <output message="tns:loadResponse"/>
+ </operation>
+ <operation name="loadconfirm">
+  <documentation>Service definition of function ns__loadconfirm</documentation>
+  <input message="tns:loadconfirmRequest"/>
+  <output message="tns:loadconfirmResponse"/>
+ </operation>
+ <operation name="rload">
+  <documentation>Service definition of function ns__rload</documentation>
+  <input message="tns:rloadRequest"/>
+  <output message="tns:rloadResponse"/>
+ </operation>
+ <operation name="unloadreq">
+  <documentation>Service definition of function ns__unloadreq</documentation>
+  <input message="tns:unloadreqRequest"/>
+  <output message="tns:unloadreqResponse"/>
+ </operation>
+ <operation name="unload">
+  <documentation>Service definition of function ns__unload</documentation>
+  <input message="tns:unloadRequest"/>
+  <output message="tns:unloadResponse"/>
+ </operation>
+ <operation name="resetpin">
+  <documentation>Service definition of function ns__resetpin</documentation>
+  <input message="tns:resetpinRequest"/>
+  <output message="tns:resetpinResponse"/>
+ </operation>
+</portType>
+
+<binding name="cardTransSvr" type="tns:cardTransSvrPortType">
+ <SOAP:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+ <operation name="mkcard">
+  <SOAP:operation soapAction=""/>
+  <input>
+     <SOAP:body parts="parameters" use="literal"/>
+  </input>
+  <output>
+     <SOAP:body parts="parameters" use="literal"/>
+  </output>
+ </operation>
+ <operation name="opdcard">
+  <SOAP:operation soapAction=""/>
+  <input>
+     <SOAP:body parts="parameters" use="literal"/>
+  </input>
+  <output>
+     <SOAP:body parts="parameters" use="literal"/>
+  </output>
+ </operation>
+ <operation name="chargecard">
+  <SOAP:operation soapAction=""/>
+  <input>
+     <SOAP:body parts="parameters" use="literal"/>
+  </input>
+  <output>
+     <SOAP:body parts="parameters" use="literal"/>
+  </output>
+ </operation>
+ <operation name="rchargecard">
+  <SOAP:operation soapAction=""/>
+  <input>
+     <SOAP:body parts="parameters" use="literal"/>
+  </input>
+  <output>
+     <SOAP:body parts="parameters" use="literal"/>
+  </output>
+ </operation>
+ <operation name="vchargecard">
+  <SOAP:operation soapAction=""/>
+  <input>
+     <SOAP:body parts="parameters" use="literal"/>
+  </input>
+  <output>
+     <SOAP:body parts="parameters" use="literal"/>
+  </output>
+ </operation>
+ <operation name="predcard">
+  <SOAP:operation soapAction=""/>
+  <input>
+     <SOAP:body parts="parameters" use="literal"/>
+  </input>
+  <output>
+     <SOAP:body parts="parameters" use="literal"/>
+  </output>
+ </operation>
+ <operation name="purchasecard">
+  <SOAP:operation soapAction=""/>
+  <input>
+     <SOAP:body parts="parameters" use="literal"/>
+  </input>
+  <output>
+     <SOAP:body parts="parameters" use="literal"/>
+  </output>
+ </operation>
+ <operation name="rpurchasecard">
+  <SOAP:operation soapAction=""/>
+  <input>
+     <SOAP:body parts="parameters" use="literal"/>
+  </input>
+  <output>
+     <SOAP:body parts="parameters" use="literal"/>
+  </output>
+ </operation>
+ <operation name="vpurchasecard">
+  <SOAP:operation soapAction=""/>
+  <input>
+     <SOAP:body parts="parameters" use="literal"/>
+  </input>
+  <output>
+     <SOAP:body parts="parameters" use="literal"/>
+  </output>
+ </operation>
+ <operation name="freezecard">
+  <SOAP:operation soapAction=""/>
+  <input>
+     <SOAP:body parts="parameters" use="literal"/>
+  </input>
+  <output>
+     <SOAP:body parts="parameters" use="literal"/>
+  </output>
+ </operation>
+ <operation name="unfreezecard">
+  <SOAP:operation soapAction=""/>
+  <input>
+     <SOAP:body parts="parameters" use="literal"/>
+  </input>
+  <output>
+     <SOAP:body parts="parameters" use="literal"/>
+  </output>
+ </operation>
+ <operation name="unfreeze2card">
+  <SOAP:operation soapAction=""/>
+  <input>
+     <SOAP:body parts="parameters" use="literal"/>
+  </input>
+  <output>
+     <SOAP:body parts="parameters" use="literal"/>
+  </output>
+ </operation>
+ <operation name="sign">
+  <SOAP:operation soapAction=""/>
+  <input>
+     <SOAP:body parts="parameters" use="literal"/>
+  </input>
+  <output>
+     <SOAP:body parts="parameters" use="literal"/>
+  </output>
+ </operation>
+ <operation name="signout">
+  <SOAP:operation soapAction=""/>
+  <input>
+     <SOAP:body parts="parameters" use="literal"/>
+  </input>
+  <output>
+     <SOAP:body parts="parameters" use="literal"/>
+  </output>
+ </operation>
+ <operation name="batch">
+  <SOAP:operation soapAction=""/>
+  <input>
+     <SOAP:body parts="parameters" use="literal"/>
+  </input>
+  <output>
+     <SOAP:body parts="parameters" use="literal"/>
+  </output>
+ </operation>
+ <operation name="tmkdown">
+  <SOAP:operation soapAction=""/>
+  <input>
+     <SOAP:body parts="parameters" use="literal"/>
+  </input>
+  <output>
+     <SOAP:body parts="parameters" use="literal"/>
+  </output>
+ </operation>
+ <operation name="refund">
+  <SOAP:operation soapAction=""/>
+  <input>
+     <SOAP:body parts="parameters" use="literal"/>
+  </input>
+  <output>
+     <SOAP:body parts="parameters" use="literal"/>
+  </output>
+ </operation>
+ <operation name="whitedown">
+  <SOAP:operation soapAction=""/>
+  <input>
+     <SOAP:body parts="parameters" use="literal"/>
+  </input>
+  <output>
+     <SOAP:body parts="parameters" use="literal"/>
+  </output>
+ </operation>
+ <operation name="lostcard">
+  <SOAP:operation soapAction=""/>
+  <input>
+     <SOAP:body parts="parameters" use="literal"/>
+  </input>
+  <output>
+     <SOAP:body parts="parameters" use="literal"/>
+  </output>
+ </operation>
+ <operation name="unlostcard">
+  <SOAP:operation soapAction=""/>
+  <input>
+     <SOAP:body parts="parameters" use="literal"/>
+  </input>
+  <output>
+     <SOAP:body parts="parameters" use="literal"/>
+  </output>
+ </operation>
+ <operation name="changecard">
+  <SOAP:operation soapAction=""/>
+  <input>
+     <SOAP:body parts="parameters" use="literal"/>
+  </input>
+  <output>
+     <SOAP:body parts="parameters" use="literal"/>
+  </output>
+ </operation>
+ <operation name="validcard">
+  <SOAP:operation soapAction=""/>
+  <input>
+     <SOAP:body parts="parameters" use="literal"/>
+  </input>
+  <output>
+     <SOAP:body parts="parameters" use="literal"/>
+  </output>
+ </operation>
+ <operation name="querycard">
+  <SOAP:operation soapAction=""/>
+  <input>
+     <SOAP:body parts="parameters" use="literal"/>
+  </input>
+  <output>
+     <SOAP:body parts="parameters" use="literal"/>
+  </output>
+ </operation>
+ <operation name="querytrans">
+  <SOAP:operation soapAction=""/>
+  <input>
+     <SOAP:body parts="parameters" use="literal"/>
+  </input>
+  <output>
+     <SOAP:body parts="parameters" use="literal"/>
+  </output>
+ </operation>
+ <operation name="vfreezetrans">
+  <SOAP:operation soapAction=""/>
+  <input>
+     <SOAP:body parts="parameters" use="literal"/>
+  </input>
+  <output>
+     <SOAP:body parts="parameters" use="literal"/>
+  </output>
+ </operation>
+ <operation name="f2zcardtrans">
+  <SOAP:operation soapAction=""/>
+  <input>
+     <SOAP:body parts="parameters" use="literal"/>
+  </input>
+  <output>
+     <SOAP:body parts="parameters" use="literal"/>
+  </output>
+ </operation>
+ <operation name="nr2rtrans">
+  <SOAP:operation soapAction=""/>
+  <input>
+     <SOAP:body parts="parameters" use="literal"/>
+  </input>
+  <output>
+     <SOAP:body parts="parameters" use="literal"/>
+  </output>
+ </operation>
+ <operation name="s2mtrans">
+  <SOAP:operation soapAction=""/>
+  <input>
+     <SOAP:body parts="parameters" use="literal"/>
+  </input>
+  <output>
+     <SOAP:body parts="parameters" use="literal"/>
+  </output>
+ </operation>
+ <operation name="validtrans">
+  <SOAP:operation soapAction=""/>
+  <input>
+     <SOAP:body parts="parameters" use="literal"/>
+  </input>
+  <output>
+     <SOAP:body parts="parameters" use="literal"/>
+  </output>
+ </operation>
+ <operation name="copdreqtrans">
+  <SOAP:operation soapAction=""/>
+  <input>
+     <SOAP:body parts="parameters" use="literal"/>
+  </input>
+  <output>
+     <SOAP:body parts="parameters" use="literal"/>
+  </output>
+ </operation>
+ <operation name="copdtrans">
+  <SOAP:operation soapAction=""/>
+  <input>
+     <SOAP:body parts="parameters" use="literal"/>
+  </input>
+  <output>
+     <SOAP:body parts="parameters" use="literal"/>
+  </output>
+ </operation>
+ <operation name="ulockcard">
+  <SOAP:operation soapAction=""/>
+  <input>
+     <SOAP:body parts="parameters" use="literal"/>
+  </input>
+  <output>
+     <SOAP:body parts="parameters" use="literal"/>
+  </output>
+ </operation>
+ <operation name="chagepincard">
+  <SOAP:operation soapAction=""/>
+  <input>
+     <SOAP:body parts="parameters" use="literal"/>
+  </input>
+  <output>
+     <SOAP:body parts="parameters" use="literal"/>
+  </output>
+ </operation>
+ <operation name="blackdown">
+  <SOAP:operation soapAction=""/>
+  <input>
+     <SOAP:body parts="parameters" use="literal"/>
+  </input>
+  <output>
+     <SOAP:body parts="parameters" use="literal"/>
+  </output>
+ </operation>
+ <operation name="accrefund">
+  <SOAP:operation soapAction=""/>
+  <input>
+     <SOAP:body parts="parameters" use="literal"/>
+  </input>
+  <output>
+     <SOAP:body parts="parameters" use="literal"/>
+  </output>
+ </operation>
+ <operation name="hsmsvr">
+  <SOAP:operation soapAction=""/>
+  <input>
+     <SOAP:body parts="parameters" use="literal"/>
+  </input>
+  <output>
+     <SOAP:body parts="parameters" use="literal"/>
+  </output>
+ </operation>
+ <operation name="dailysettlesvr">
+  <SOAP:operation soapAction=""/>
+  <input>
+     <SOAP:body parts="parameters" use="literal"/>
+  </input>
+  <output>
+     <SOAP:body parts="parameters" use="literal"/>
+  </output>
+ </operation>
+ <operation name="genvcardno">
+  <SOAP:operation soapAction=""/>
+  <input>
+     <SOAP:body parts="parameters" use="literal"/>
+  </input>
+  <output>
+     <SOAP:body parts="parameters" use="literal"/>
+  </output>
+ </operation>
+ <operation name="vcardpaycode">
+  <SOAP:operation soapAction=""/>
+  <input>
+     <SOAP:body parts="parameters" use="literal"/>
+  </input>
+  <output>
+     <SOAP:body parts="parameters" use="literal"/>
+  </output>
+ </operation>
+ <operation name="scannotice">
+  <SOAP:operation soapAction=""/>
+  <input>
+     <SOAP:body parts="parameters" use="literal"/>
+  </input>
+  <output>
+     <SOAP:body parts="parameters" use="literal"/>
+  </output>
+ </operation>
+ <operation name="scanpay">
+  <SOAP:operation soapAction=""/>
+  <input>
+     <SOAP:body parts="parameters" use="literal"/>
+  </input>
+  <output>
+     <SOAP:body parts="parameters" use="literal"/>
+  </output>
+ </operation>
+ <operation name="grey">
+  <SOAP:operation soapAction=""/>
+  <input>
+     <SOAP:body parts="parameters" use="literal"/>
+  </input>
+  <output>
+     <SOAP:body parts="parameters" use="literal"/>
+  </output>
+ </operation>
+ <operation name="ungrey">
+  <SOAP:operation soapAction=""/>
+  <input>
+     <SOAP:body parts="parameters" use="literal"/>
+  </input>
+  <output>
+     <SOAP:body parts="parameters" use="literal"/>
+  </output>
+ </operation>
+ <operation name="load">
+  <SOAP:operation soapAction=""/>
+  <input>
+     <SOAP:body parts="parameters" use="literal"/>
+  </input>
+  <output>
+     <SOAP:body parts="parameters" use="literal"/>
+  </output>
+ </operation>
+ <operation name="loadconfirm">
+  <SOAP:operation soapAction=""/>
+  <input>
+     <SOAP:body parts="parameters" use="literal"/>
+  </input>
+  <output>
+     <SOAP:body parts="parameters" use="literal"/>
+  </output>
+ </operation>
+ <operation name="rload">
+  <SOAP:operation soapAction=""/>
+  <input>
+     <SOAP:body parts="parameters" use="literal"/>
+  </input>
+  <output>
+     <SOAP:body parts="parameters" use="literal"/>
+  </output>
+ </operation>
+ <operation name="unloadreq">
+  <SOAP:operation soapAction=""/>
+  <input>
+     <SOAP:body parts="parameters" use="literal"/>
+  </input>
+  <output>
+     <SOAP:body parts="parameters" use="literal"/>
+  </output>
+ </operation>
+ <operation name="unload">
+  <SOAP:operation soapAction=""/>
+  <input>
+     <SOAP:body parts="parameters" use="literal"/>
+  </input>
+  <output>
+     <SOAP:body parts="parameters" use="literal"/>
+  </output>
+ </operation>
+ <operation name="resetpin">
+  <SOAP:operation soapAction=""/>
+  <input>
+     <SOAP:body parts="parameters" use="literal"/>
+  </input>
+  <output>
+     <SOAP:body parts="parameters" use="literal"/>
+  </output>
+ </operation>
+</binding>
+
+<service name="cardTransSvr">
+ <documentation>gSOAP 2.8.3 generated service definition</documentation>
+ <port name="cardTransSvr" binding="tns:cardTransSvr">
+  <SOAP:address location="http://172.18.4.114:9000"/>
+ </port>
+</service>
+
+</definitions>

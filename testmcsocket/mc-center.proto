@@ -1,0 +1,143 @@
+syntax = "proto3";
+
+package sapcis.protobuf.mc;
+
+message SalesTransLogPacket {
+  string type = 1;
+  string table_name = 2;
+  repeated SalesTransLog data = 3;
+}
+
+message SalesTransLog {
+  string termPrimaryKey = 1;
+  string termTraNo = 2;
+  string term_id = 3;
+  string node_no = 4;
+  uint64 schedule_id = 5;
+  string comp_no = 6;
+  string member_no = 7;
+  uint32 member_points_i = 8;
+  uint32 member_points_bal = 9;
+  string trans_datetime = 10;
+  string trans_amt = 11;
+  string order_dis_amt = 12;
+  string dis_amt = 13;
+  uint32 print_status = 14;
+  uint32 order_type = 15;
+  uint32 buss_type = 16;
+  string operator_no = 17;
+  uint32 calc_member_points = 18;
+  uint32 calc_storage_num = 19;
+  repeated SalesTransLogSku trans_detail = 20;
+  repeated SalesTransLogPay payment_detail = 21;
+}
+
+message SalesTransLogSku {
+  string termShopPrimaryKey = 1;
+  string termPrimaryKey = 2;
+  string term_detail_no = 3;
+  uint64 sku_id = 4;
+  string sku_code = 5;
+  string bar_code = 6;
+  uint32 category_type = 7;
+  string trans_amt = 8;
+  string discount_amt = 9;
+  string sales_count = 10;
+  string price = 11;
+  uint32 nzn = 12;
+  uint32 isManual = 13;
+  uint32 term_ttc = 14;
+  string term_bat = 15;
+  string term_ssn = 16;
+  string term_id = 17;
+  uint32 t_type = 18;
+  string pump_no = 19;
+}
+
+message SalesTransLogPay {
+  string termSlavePrimaryKey = 1;
+  string termPrimaryKey = 2;
+  string termSlaveTraNo = 3;
+  uint32 payment_type = 4;
+  string card_no = 5;
+  uint32 deduct_flag = 6;
+  uint32 suc_tag = 7;
+  string bal = 8;
+  string ctc = 9;
+  string ds = 10;
+  string gmac = 11;
+  string psam_tac = 12;
+  string psam_asn = 13;
+  string psam_tid = 14;
+  uint64 psam_ttc = 15;
+  string out_trade_no = 16;
+  string amt = 17;
+  string pay_datetime = 18;
+  uint32 trans_type = 19;
+  string payment_type_sub = 20;
+}
+
+message WorkSchedulePacket {
+  string type = 1;
+  string table_name = 2;
+  repeated WorkSchedule data = 3;
+}
+
+message WorkSchedule {
+   uint64 id = 1;
+   string node_no = 2;
+   uint64 team_id = 3;
+   uint64 shift_id = 4;
+   string work_team_name = 5;
+   string work_shift_name = 6;
+   string schedule_date = 7;
+   string act_start_time = 8;
+   string act_end_time = 9;
+   uint32 status_id = 10;
+   uint32 transfer_flag = 11;
+}
+
+message PcDeal {
+   uint64  uid = 1 ;
+   string  createtime = 2;
+   uint32  pos_ttc=3;
+   string  pos_term_id=4;
+   string  pos_term_bat=5;
+   string  pos_term_ssn=6;
+   string  oil_type=7;
+   string  oil_litter=8;
+   string  trans_amt=9;
+   string  comp_no=10;
+   string  card_no=11;
+   uint32  trans_type=12;
+   string  trans_dt=13;
+   string  trans_tm=14;
+   string  operator_no=15;
+   string  primary_key=16;
+   uint32  nozzle=17;
+   string  shift_id=18;
+   string  shift_no=19;
+   string  shift_serial=20;
+   string  price=21;
+   uint32  payment_type=22;
+   string  pump_no=23;
+   uint32  print_status=24;
+   uint32  transfer_flag=25;
+   string  remark=26;
+   string  node_no=27;
+   uint32  deduct_flag=28;
+   uint32  suc_tag=29;
+   string  acq_provnid=30;
+   string  merch_id=31;
+   string  dis_amt=32;
+   string  get_time=33;
+   string  trans_datetime=34;
+   string  bal=35;
+   string  ctc=36;
+   string  ds=37;
+   string  gmac=38;
+   string  psam_tac=39;
+   string  psam_asn=40;
+   string  psam_tid=41;
+   uint32  psam_ttc=42;
+}

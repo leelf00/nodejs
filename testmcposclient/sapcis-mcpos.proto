@@ -1,0 +1,55 @@
+syntax = "proto3";
+
+package sapcis.protobuf.mcpos;
+
+message ClientHeartBeat {
+  int32 clienttype = 1;
+  int32 version = 2;
+  int64 termID = 3;
+  int32 nodeNo = 4;
+}
+
+message ProgramUpdate {
+  int32 clienttype = 1;
+  int32 version = 2;
+  string filename = 3;
+  string downloadUrl = 4;
+}
+
+message CrashReportPacket {
+  repeated CrashReport data = 1;
+}
+
+message CrashReport {
+  int64 termID = 1;
+  int32 nodeNo = 2;
+  string crashid = 3;
+  uint64 crashtime = 4;
+  bytes crashcontent = 5;
+  uint32 versioncode = 6;
+  string versionname = 7;
+}
+
+message PaidTransLog {
+  int32 nzn = 1;
+  int32 pos_ttc = 2;
+  int64 termID = 3;
+  int32 nodeNo = 4;
+  string acctNo = 5;
+  float payAmount = 6;
+}
+
+message UnPaidTransLogPacket {
+  repeated UnPaidTransLog data = 1;
+}
+
+message UnPaidTransLog {
+  int32 nzn = 1;
+  int32 pos_ttc = 2;
+  int32 time = 3;
+  int32 g_code = 4;
+  float prc = 5;
+  float vol = 6;
+  float amn = 7;
+  int64 asn = 8;
+}

@@ -1,0 +1,62 @@
+package sapcis.protobuf.mc;
+
+syntax = "proto3";
+
+message WorkSchedule {
+  required uint64 id = 1;
+  required string node_no = 2;
+  required uint64 team_id = 3;
+  required uint64 shift_id = 4;
+  required string work_team_name = 5;
+  required string work_shift_name = 6;
+  required string schedule_date = 7;
+  optional string act_start_time = 8;
+  optional string act_end_time = 9;
+  required uint32 status_id = 10;
+  optional uint32 transfer_flag = 11;
+}
+
+message PcDeal {
+  required uint64  uid = 1 ;
+  required string  createtime = 2;
+  required uint32  pos_ttc=3;
+  required string  pos_term_id=4;
+  required string  pos_term_bat=5;
+  required string  pos_term_ssn=6;
+  required string  oil_type=7;
+  required string  oil_litter=8;
+  required string  trans_amt=9;
+  required string  comp_no=10;
+  required string  card_no=11;
+  required uint32  trans_type=12;
+  required string  trans_dt=13;
+  required string  trans_tm=14;
+  required string  operator_no=15;
+  required string  primary_key=16;
+  required uint32  nozzle=17;
+  required string  shift_id=18;
+  required string  shift_no=19;
+  required string  shift_serial=20;
+  required string  price=21;
+  required uint32  payment_type=22;
+  required string  pump_no=23;
+  required uint32  print_status=24;
+  required uint32  transfer_flag=25;
+  required string  remark=26;
+  required string  node_no=27;
+  required uint32  deduct_flag=28;
+  required uint32  suc_tag=29;
+  required string  acq_provnid=30;
+  required string  merch_id=31;
+  required string  dis_amt=32;
+  required string  get_time=33;
+  required string  trans_datetime=34;
+  required string  bal=35;
+  required string  ctc=36;
+  required string  ds=37;
+  required string  gmac=38;
+  required string  psam_tac=39;
+  required string  psam_asn=40;
+  required string  psam_tid=41;
+  required uint32  psam_ttc=42;
+}

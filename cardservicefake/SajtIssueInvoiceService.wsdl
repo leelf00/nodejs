@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ns1="http://org.apache.axis2/xsd" xmlns:ns="http://service.ws.webservice.sajt" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:ax21="http://service.ws.webservice.sajt/xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://service.ws.webservice.sajt">
+    <wsdl:types>
+        <xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://service.ws.webservice.sajt/xsd">
+            <xs:complexType name="SajtIssueInvoiceResponse">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="cmdMessage" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="status" nillable="true" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+        </xs:schema>
+        <xs:schema xmlns:ax22="http://service.ws.webservice.sajt/xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://service.ws.webservice.sajt">
+            <xs:import namespace="http://service.ws.webservice.sajt/xsd"/>
+            <xs:element name="saveDocument">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="command" nillable="true" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="saveDocumentResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="return" nillable="true" type="ax22:SajtIssueInvoiceResponse"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:schema>
+    </wsdl:types>
+    <wsdl:message name="saveDocumentRequest">
+        <wsdl:part name="parameters" element="ns:saveDocument"/>
+    </wsdl:message>
+    <wsdl:message name="saveDocumentResponse">
+        <wsdl:part name="parameters" element="ns:saveDocumentResponse"/>
+    </wsdl:message>
+    <wsdl:portType name="SajtIssueInvoiceServicePortType">
+        <wsdl:operation name="saveDocument">
+            <wsdl:input message="ns:saveDocumentRequest" wsaw:Action="urn:saveDocument"/>
+            <wsdl:output message="ns:saveDocumentResponse" wsaw:Action="urn:saveDocumentResponse"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="SajtIssueInvoiceServiceSoap11Binding" type="ns:SajtIssueInvoiceServicePortType">
+        <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+        <wsdl:operation name="saveDocument">
+            <soap:operation soapAction="urn:saveDocument" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:binding name="SajtIssueInvoiceServiceSoap12Binding" type="ns:SajtIssueInvoiceServicePortType">
+        <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+        <wsdl:operation name="saveDocument">
+            <soap12:operation soapAction="urn:saveDocument" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:binding name="SajtIssueInvoiceServiceHttpBinding" type="ns:SajtIssueInvoiceServicePortType">
+        <http:binding verb="POST"/>
+        <wsdl:operation name="saveDocument">
+            <http:operation location="SajtIssueInvoiceService/saveDocument"/>
+            <wsdl:input>
+                <mime:content type="text/xml" part="saveDocument"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="text/xml" part="saveDocument"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="SajtIssueInvoiceService">
+        <wsdl:port name="SajtIssueInvoiceServiceHttpSoap11Endpoint" binding="ns:SajtIssueInvoiceServiceSoap11Binding">
+            <soap:address location="http://localhost:8080/axis2/services/SajtIssueInvoiceService"/>
+        </wsdl:port>
+        <wsdl:port name="SajtIssueInvoiceServiceHttpSoap12Endpoint" binding="ns:SajtIssueInvoiceServiceSoap12Binding">
+            <soap12:address location="http://localhost:8080/axis2/services/SajtIssueInvoiceService"/>
+        </wsdl:port>
+        <wsdl:port name="SajtIssueInvoiceServiceHttpEndpoint" binding="ns:SajtIssueInvoiceServiceHttpBinding">
+            <http:address location="http://localhost:8080/axis2/services/SajtIssueInvoiceService"/>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>
